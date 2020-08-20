@@ -40,9 +40,14 @@ body
 }
 
 // modals
-#add-book-modal
+#add-book-form
 {
-    background:transparent;
-    margin: 0;
-    max-height: 100% !important;
+    .col
+    {
+        margin: 0;
+    }
+    button
+    {
+        background: transparent;
+    }
 }

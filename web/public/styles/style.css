@@ -30,10 +30,11 @@ body #books table {
   font-size: 2em;
 }
 
-#add-book-modal {
-  background: transparent;
+#add-book-form .col {
   margin: 0;
-  max-height: 100% !important;
+}
+#add-book-form button {
+  background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

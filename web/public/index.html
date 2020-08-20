@@ -10,7 +10,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <title>Library</title>
 </head>
 
 <body>
@@ -23,14 +23,39 @@
             </div>
         </div>
     </header>
-
+    <button onmousedown="ClearLocalStorage()">clear</button>
     <section id="books">
         <div class="container">
-            <button class="btn-floating btn-large waves-effect waves-light red add-book" data-toggle="modal"
-                data-target="#add-book-modal">
-                <i class="material-icons">add</i>
-            </button>
-
+            <form class="d-flex" id="add-book-form" onsubmit="AddBook(event)">
+                  <div class="input-field col">
+                    <input id="book-name" type="text" class="validate" name="book-name" value="">
+                    <label for="book-name">Book name</label>
+                  </div>
+                  <div class="input-field col">
+                    <input id="book-author" type="text" class="validate" name="book-author" value="">
+                    <label for="book-author">Book author</label>
+                  </div>
+                  <div class="input-field col">
+                    <input id="book-year" type="text" class="validate" name="book-year" value="">
+                    <label for="book-year">Year</label>
+                  </div>
+                  <div class="input-field col">
+                    <input id="book-publisher" type="text" class="validate" name="book-publisher">
+                    <label for="book-publisher">Publisher</label>
+                  </div>
+                  <div class="input-field col">
+                    <input id="book-pages" type="text" class="validate" name="book-pages">
+                    <label for="book-pages">Pages</label>
+                  </div>
+                  <div class="input-field col">
+                    <input id="book-count" type="text" class="validate" name="book-count">
+                    <label for="book-count">Count</label>   
+                  </div>
+                  <div class="input-field col">
+                    <button type="submit"> <i class="small material-icons">add</i> </button>
+                    <button type="reset"><i class="small material-icons">clear</i></button>
+                  </div>
+            </form>
             <table class="table table-striped table-bordered ">
                 <thead>
                     <tr>
@@ -44,65 +69,12 @@
                         <th scope="col">Edit</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                <tbody id="books-list">
                 </tbody>
             </table>
         </div>
     </section>
 
-
-    <!-- modals -->
-    <div class="modal fade" id="add-book-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="false" backdrop="false">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Add new book</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="material-icons">close</i></span>
-                    </button>
-                </div>
-                <form id="add-book" onsubmit="AddBook(event)">
-                    <div class="modal-body">
-                        <div class="input-field col s6">
-                            <input id="val_a" name="a" type="text" value="">
-                            <label for="val_a">A</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="val_b" name="b" type="text" value="">
-                            <label for="val_b">B</label>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn-large waves-effect waves-light green">
-                            <i class="material-icons">add</i>
-                        </button>
-                        <button class="btn-large waves-effect waves-light green" data-dismiss="modal">
-                            <i class="material-icons">close</i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
