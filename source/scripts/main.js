@@ -91,7 +91,7 @@ EditBook = function(bookId)
     form['book-publisher'].value = book.count
     form['book-pages'].value = book.pages
     form['book-count'].value = book.count
-
+    M.updateTextFields();
     localStorage.setItem('books',JSON.stringify(library))
     RenderBooks()
 }
