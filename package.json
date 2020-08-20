@@ -1,0 +1,20 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web/app.js",
+  "scripts": {
+    "build-script-bundle": "browserify source/scripts/main.js --s module > web/public/scripts/main-bundle.js",
+    "b-script": "npm run build-script-bundle",
+    "build-styles-bundle": "sass source/styles/style.scss web/public/styles/style.css",
+    "b-style": "npm run build-styles-bundle",
+    "start": "node .",
+    "build": "npm run build-script-bundle && npm run build-styles-bundle"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hogan.js": "^3.0.2"
+  }
+}

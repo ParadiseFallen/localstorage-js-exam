@@ -1,0 +1,39 @@
+* {
+  font-size: 10px;
+}
+
+button,
+button:active,
+button:focus,
+button:hover {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header .title {
+  display: inline-block;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+body #books .add-book {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  transform: translate(-250%, -200%);
+}
+body #books table {
+  font-size: 2em;
+}
+
+#add-book-modal {
+  background: transparent;
+  margin: 0;
+  max-height: 100% !important;
+}
+
+/*# sourceMappingURL=style.css.map */
